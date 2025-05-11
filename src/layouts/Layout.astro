@@ -1,29 +1,50 @@
 ---
 import { ClientRouter } from "astro:transitions";
-import '../styles/global.css';
+import background from "../assets/background.svg";
+// import '../styles/reset.css'
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-		<ClientRouter></ClientRouter>
-	</head>
-	<body>
-		<nav class="navbar">
-			<a href="/">Inicio</a>
-			<a href="/v1.0.0">Versión 1.0.0</a>
-			<a href="/v1.1.0">Versión 1.1.0</a>
-			<a href="/v1.2.0">Versión 1.2.0</a>
-		</nav>
-		<main class="main">
-			<slot />
-		</main>
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta
+      name="author"
+      content="Daniel Ignacio Lamas y Joaquín Antonio Macaroff"
+    />
+    <meta
+      name="keywords"
+      content="Sistema, Rutas, Transporte, Optimización, Ingeniería, Informática"
+    />
+
+    <title>{title}</title>
+    <ClientRouter />
+  </head>
+  <body>
+    <header class="Header">
+      <Navbar />
+    </header>
+    <main class="Main">
+      <!-- <img
+        class="Background"
+        src={background.src}
+        alt=""
+        fetchpriority="high"
+      /> -->
+      <slot />
+    </main>
+  </body>
 </html>
-
-

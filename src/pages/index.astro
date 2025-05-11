@@ -1,11 +1,133 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="Journeys - Inicio"
+  description="Presentación del proyecto de investigación sobre la optimización de rutas en el proceso de transporte"
+>
+  <section class="Project">
+    <h1 class="Project-title">
+      Desarrollo de un sistema integral orientado a la optimización de rutas en
+      el proceso de transporte
+    </h1>
+    <section class="Project-details">
+      <span>Facultad de Ingeniería, Universidad Católica de Salta</span>
+      <dl class="Project-list">
+        <dt>Carrera:</dt>
+        <dd>Ingeniería en Informática</dd>
+
+        <dt>Autores:</dt>
+        <dd>Daniel Ignacio Lamas y Joaquín Antonio Macaroff</dd>
+
+        <dt>Profesor Guía:</dt>
+        <dd>Lic. Patricio Alejandro Arredes</dd>
+
+        <dt>Año:</dt>
+        <dd>2025</dd>
+      </dl>
+    </section>
+    <section class="Project-abstract">
+      <h2>Resumen</h2>
+      <p>
+        La presente tesis expone el desarrollo de un sistema informático
+        integral orientado a la optimización de rutas en el proceso de
+        transporte, adaptable a distintos contextos y casos de uso. Con el
+        propósito de mejorar la eficiencia operativa, se diseñó y desarrolló una
+        aplicación web moderna que automatiza parcialmente el proceso de
+        optimización de rutas.
+      </p>
+      <p>
+        La solución se validó en dos contextos distintos, utilizando para ello
+        un caso de uso representativo en cada uno, con el fin de demostrar su
+        aplicación práctica y efectividad en escenarios reales. En su desarrollo
+        se contemplaron aspectos técnicos clave como escalabilidad,
+        accesibilidad, optimización para motores de búsqueda (SEO), rendimiento,
+        e integración con servicios externos. Además, se empleó un enfoque
+        metodológico híbrido, combinando el modelo de proceso incremental, el
+        marco ágil Kanban y el desarrollo basado en componentes.
+      </p>
+      <p>
+        La solución incorpora funcionalidades adicionales como estadísticas
+        básicas, notificaciones en tiempo real, asistencia inteligente y
+        programación de tareas asíncronas. Como resultado, se obtuvo un sistema
+        funcional, que conforma un producto mínimo viable (MVP) validable, que
+        cumple satisfactoriamente con los requerimientos definidos y establece
+        las bases técnicas y metodológicas para futuras líneas de investigación
+        y desarrollo del problema en cuestión.
+      </p>
+    </section>
+
+    <section class="Buttons">
+      <a class="Button" href="https://journeys-web.vercel.app/login">Ver demo</a
+      >
+      <!-- <a class="Button" href="https://journeys-web.vercel.app/login">API</a>
+      <a class="Button" href="https://journeys-web.vercel.app/login">Poster</a>
+      <a class="Button" href="https://journeys-web.vercel.app/login"
+        >Documento</a
+      > -->
+    </section>
+  </section>
 </Layout>
+
+<style>
+  .Project {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .Project-title {
+    font-size: 1.8125rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top: 2.5rem;
+    margin-bottom: 0rem;
+  }
+
+  .Project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .Project-list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+  }
+
+  .Project-list dt {
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
+  .Project-abstract h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top: 0;
+  }
+
+  .Project-abstract p {
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+
+  .Buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: start;
+  }
+
+  .Button {
+    padding: 10px;
+    text-decoration: none;
+    background-color: #f9802d;
+    color: white;
+    border-radius: 5px;
+    width: 9.375rem;
+    text-align: center;
+  }
+</style>
