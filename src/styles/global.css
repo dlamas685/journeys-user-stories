@@ -5,17 +5,8 @@ body {
   padding: 0;
   height: 100%;
   hyphens: auto;
-}
-
-.Navbar {
-  display: flex;
-  width: auto;
-  padding: 1rem;
-}
-
-.Navbar a {
-  text-decoration: none;
-  padding: 0.5rem 1rem;
+  max-width: 75rem;
+  margin: 0 auto;
 }
 
 .Main {
