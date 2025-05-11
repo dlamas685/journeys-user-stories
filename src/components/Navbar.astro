@@ -4,13 +4,13 @@ const currentPath = Astro.url.pathname;
 
 <nav class="Navbar">
   <a href="/" class={currentPath === "/" ? "active" : ""}>Inicio</a>
-  <a href="/v1.0.0" class={currentPath === "/v1.0.0" ? "active" : ""}
+  <a href="/v1.0.0" class={currentPath.includes("/v1.0.0") ? "active" : ""}
     >Versión 1.0.0</a
   >
-  <a href="/v1.1.0" class={currentPath === "/v1.1.0" ? "active" : ""}
+  <a href="/v1.1.0" class={currentPath.includes("/v1.1.0") ? "active" : ""}
     >Versión 1.1.0</a
   >
-  <a href="/v1.2.0" class={currentPath === "/v1.2.0" ? "active" : ""}
+  <a href="/v1.2.0" class={currentPath.includes("/v1.2.0") ? "active" : ""}
     >Versión 1.2.0</a
   >
 </nav>
